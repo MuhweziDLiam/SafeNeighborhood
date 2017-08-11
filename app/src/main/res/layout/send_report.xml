@@ -1,0 +1,212 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:id="@+id/rootView"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".reports.SendReport">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_add_a_photo_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:clickable="true"
+                android:id="@+id/add_photo_text"
+                android:text="Add Photo"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/report_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border="true"
+                app:civ_shadow="true"
+                android:layout_gravity="center_horizontal"
+                app:civ_shadow_color="@color/colorBlack"
+                app:civ_shadow_radius="0.0" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/contentDividerLine" />
+
+
+            <!-- Description Label -->
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <EditText android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:inputType="textCapWords"
+                    android:hint="Description" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+
+                android:src="@color/contentDividerLine" />
+
+            <!--Date Label-->
+            <LinearLayout
+                android:id="@+id/layout_date"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:onClick="setDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_date_range_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Set Date"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/DatetextView" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="9dp"
+                android:src="@color/contentDividerLine" />
+
+
+            <!--Time Label-->
+            <LinearLayout
+                android:id="@+id/layout_time"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:onClick="setTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_alarm_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Set Time"
+                    android:textSize="18sp"
+                    android:id="@+id/timeTextView"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="9dp"
+                android:src="@color/contentDividerLine" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_location"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_gps_fixed_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Add Location"
+                    android:textSize="18sp"
+                    android:id="@+id/locationTextView"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="9dp"
+                android:src="@color/contentDividerLine" />
+
+
+            <!-- Signup Button -->
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/send_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_action_tick"
+                app:backgroundTint="@color/colorRed"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp"
+                app:rippleColor="@android:color/white"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
