@@ -116,7 +116,6 @@ public class SendReport extends AppCompatActivity implements
             }
         });
 
-
     }
 
     // On clicking Time picker

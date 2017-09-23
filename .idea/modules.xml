@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SafeNeighborhood.iml" filepath="$PROJECT_DIR$/SafeNeighborhood.iml" />
       <module fileurl="file://$PROJECT_DIR$/SafeNeighborhoodAlpha.iml" filepath="$PROJECT_DIR$/SafeNeighborhoodAlpha.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

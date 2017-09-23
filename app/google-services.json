@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "642427596273",
+    "firebase_url": "https://mayumba10-48c60.firebaseio.com",
+    "project_id": "mayumba10-48c60",
+    "storage_bucket": "mayumba10-48c60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642427596273:android:4e8424813548a42b",
+        "android_client_info": {
+          "package_name": "com.example.muhwezidenisliam.safeneighborhoodalpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642427596273-k88efbpl9ibtgmj6q18egpfum25bi11e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1I9Sif4fyk_fg4gYbjdJu7GRU5m9uePg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

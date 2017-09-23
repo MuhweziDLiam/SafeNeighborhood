@@ -6,4 +6,9 @@
     <color name="colorDarkRed">#800000</color>
     <color name="colorGrey">#696969</color>
     <color name="contentDividerLine">#e0e0e0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="back">#dcddde</color>
+
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
 </resources>
