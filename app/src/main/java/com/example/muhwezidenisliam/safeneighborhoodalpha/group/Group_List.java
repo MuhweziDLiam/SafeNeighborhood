@@ -94,6 +94,7 @@ public void populategroups(){
                 Map<String, Object> map = snapshot.getValue(m);
 
                 Log.i("Mufz", "User length Value is: " + snapshot.getChildrenCount());
+
                 for(int i=0; i<snapshot.getChildrenCount(); i++) {
 
 

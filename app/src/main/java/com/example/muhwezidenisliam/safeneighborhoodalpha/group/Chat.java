@@ -83,20 +83,15 @@ public class Chat extends AppCompatActivity{
                 }
             }
         });
+
         group_name=(getIntent().getExtras().getString("name"));
-
-
             // User is already signed in, show list of messages
             showAllOldMessages();
-
-
     }
 
     private void showAllOldMessages() {
-
         loggedInUserName =userphone;
         Log.d("Main", "user id: " + loggedInUserName);
-
         adapter = new MessageAdapter(this, R.layout.item_in_message, ChatBubbles);
         listView.setAdapter(adapter);
     }
@@ -117,24 +112,22 @@ public void firebase_read(){
                 ChatBubbles.add(newproduct);
                 adapter.notifyDataSetChanged();
             }
-
         }
-
         @Override
         public void onCancelled(FirebaseError firebaseError) {
-
+            //Log("The error" ,firebaseError.toString(),);
         }
     });
-}
+        }
     @Override
     public void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser == null) {
-            System.out.println("uuuuuuuuuuuuuuuuuuu");
+            System.out.println("No current user");
         } else {
             userphone=currentUser.getPhoneNumber();
-            System.out.println("tttttttttttttttt"+userphone);
+            System.out.println("Current User :"+userphone);
         }
     }
     @Override
@@ -151,7 +144,6 @@ public void firebase_read(){
                    intent.putExtra("gname", group_name);
                 startActivity(intent);
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -161,7 +153,5 @@ public void firebase_read(){
         // Write your code here
 
         super.onBackPressed();
-
     }
-
 }

@@ -45,13 +45,11 @@ public class phoneAuth extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_auth);
-
         mPhoneNumberField = (EditText) findViewById(R.id.field_phone_number);
         mVerificationField = (EditText) findViewById(R.id.field_verification_code);
         username = (EditText) findViewById(R.id.username);
 
         FirebaseApp.initializeApp(this);
-
         mStartButton = (Button) findViewById(R.id.button_start_verification);
         mVerifyButton = (Button) findViewById(R.id.button_verify_phone);
         mResendButton = (Button) findViewById(R.id.button_resend);
@@ -70,7 +68,6 @@ public class phoneAuth extends AppCompatActivity implements
                 Log.d(TAG, "onVerificationCompleted:" + credential);
                 signInWithPhoneAuthCredential(credential);
             }
-
             @Override
             public void onVerificationFailed(FirebaseException e) {
                 Log.w(TAG, "onVerificationFailed", e);
@@ -81,7 +78,6 @@ public class phoneAuth extends AppCompatActivity implements
                             Snackbar.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onCodeSent(String verificationId,
                                    PhoneAuthProvider.ForceResendingToken token) {
@@ -91,7 +87,6 @@ public class phoneAuth extends AppCompatActivity implements
             }
         };
     }
-
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -105,9 +100,7 @@ public class phoneAuth extends AppCompatActivity implements
                             userphone=user.getPhoneNumber();
                             user_model.setUserPhone(user.getPhoneNumber());
                             user_model.setUsername(username.getText().toString().trim());
-
                             Firebase firebase=new Firebase(Config.FIREBASE_URL);
-
                             firebase.child("users").push().setValue(user_model);
 
                             startActivity(new Intent(phoneAuth.this, Group_List.class));
@@ -120,9 +113,7 @@ public class phoneAuth extends AppCompatActivity implements
                         }
                     }
                 });
-    }
-
-
+            }
     private void startPhoneNumberVerification(String phoneNumber) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phoneNumber,        // Phone number to verify
@@ -131,12 +122,10 @@ public class phoneAuth extends AppCompatActivity implements
                 this,               // Activity (for callback binding)
                 mCallbacks);        // OnVerificationStateChangedCallbacks
     }
-
     private void verifyPhoneNumberWithCode(String verificationId, String code) {
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
         signInWithPhoneAuthCredential(credential);
     }
-
     private void resendVerificationCode(String phoneNumber,
                                         PhoneAuthProvider.ForceResendingToken token) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
@@ -147,7 +136,6 @@ public class phoneAuth extends AppCompatActivity implements
                 mCallbacks,         // OnVerificationStateChangedCallbacks
                 token);             // ForceResendingToken from callbacks
     }
-
     private boolean validatePhoneNumber() {
         String phoneNumber = mPhoneNumberField.getText().toString();
         if (TextUtils.isEmpty(phoneNumber)) {
@@ -165,7 +153,6 @@ public class phoneAuth extends AppCompatActivity implements
             finish();
         }
     }
-
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -181,14 +168,12 @@ public class phoneAuth extends AppCompatActivity implements
                     mVerificationField.setError("Cannot be empty.");
                     return;
                 }
-
                 verifyPhoneNumberWithCode(mVerificationId, code);
                 break;
             case R.id.button_resend:
                 resendVerificationCode(mPhoneNumberField.getText().toString(), mResendToken);
                 break;
         }
-
     }
     String userphone="";
     public String getCurrentUser(){
