@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="quick_menu">
+        <item>Send Report|report</item>
+        <item>Chat|group_chats</item>
+        <item>View Report|view_reports</item>
+        <item>My Location|google_maps</item>
+    </string-array>
+    <string-array name="emergencies">
+        <item>Burglar|burglar</item>
+        <item>Fire|fire</item>
+        <item>Call Ambulance|ambulance</item>
+        <item>Murder|murder</item>
+    </string-array>
+</resources>
