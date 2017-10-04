@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="5dp"
+    card_view:contentPadding="5dp"
+    card_view:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:text="Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:src="@android:color/darker_gray" />
+
+        <com.example.muhwezidenisliam.safeneighborhoodalpha.widget.MenusLayout
+            android:id="@+id/menus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/mdtp_white" />
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

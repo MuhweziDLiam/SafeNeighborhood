@@ -41,4 +41,5 @@ dependencies {
     compile 'com.github.delight-im:Android-SimpleLocation:v1.0.1'
     compile 'com.github.safetysystemtechnology:android-shake-detector:v1.2'
     compile 'com.akexorcist:googledirectionlibrary:1.0.5'
+    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
 }
